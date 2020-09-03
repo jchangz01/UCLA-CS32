@@ -81,12 +81,9 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
 		{
 			routeCoords.push_back(current);
 			route = generateListRoute(start, routeCoords, totalDistanceTravelled);
-			cout << current.latitudeText << " " << current.longitudeText << endl;
-			cout << endl;
 			return DELIVERY_SUCCESS;
 		}
 
-		cout << current.latitudeText << " " << current.longitudeText << endl;
 		openSet.pop();
 		includedInSet.erase(current);
 		routeCoords.push_back(current);
