@@ -1,0 +1,54 @@
+StreetMap
+1) load() - O(L)
+	The streetmap load function always reads every line of the passed
+	in text document to guarantee at least an O(L) time complexity. 
+	During each line iteration, the algorithm checks for duplicates and
+	adds data into the expandable hash map. To check if there is a 
+	duplicate, the hash map's find function is called. This search has an
+	average time complexity of O(1). If a duplicate is found, all street 
+	segments already associated with that GeoCoord is read and added to the
+	new set of street segments. On average, this takes O(1) because we
+	are constantly rehashing our hash map. Finally, when associating data,
+	we will have an average big-O of O(1). However, because we
+	are constantly rehashing our map, this process can take as much
+	O(G) to re-associate all GeoCoords into a larger container making the worst
+	time case to be O(L * G), but the average case to just be O(L)  
+2) getSegmentsThatStartWith() - O(1)
+	The getSegmentsThatStartWith function calls expandable hash map's find function 
+	to retrieve the streetsegments associated with a GeoCoord. As mentioned
+	before,	the find() member function has an average time complexity of
+	O(1) making this function's speed identical.
+
+
+PointToPointRouter
+1) generatePointToPointRoute() - A* algorithm
+	The generatePointToPointRoute function implements the A* algorithm 
+	to calculate the GeoCoords needed to navigate from start to end. In 
+	this function, multiple data structures are used to complete several
+	different task. To begin, two expandable hash maps are incorporated to 
+	track the gScores and fScores of each evaluated GeoCoord. Alongside this,
+	a priority queue of GeoCoords ordered by the ascending order of their fScores
+	is used to quickly access (O(1)) the GeoCoord with the lowest fScore. Because
+	a queue only has access to the top value, a set with matching values tracks the 
+	values of the priority queue. Finally, the routeCoords vector receives all 
+	important GeoCoords and in the end, compiles theres coordinates into street segments
+	that navigate the user from start to end. In this implementation, other vectors
+	are midely used to guarantee that the generated path has connecting coordinates and 
+	to form the list of street segments that we will be returning.
+
+DeliveryOptimizer
+1) optimizeDeliveryOrder() - O(R^2)
+	The optimizeDeliveryOrder function begins by calculating the oldCrowDistance of the
+	passed in DeliveryRequests. This runs for O(R) times with R being the number of
+	delivery requests. Afterwards, it begins to process the newCrowDistance and 
+	newCrowOrder aka order of delivery. My order delivery algorithm runs until
+	the delivery request vector is empty. Inside this loop, it calculates the 
+	next closest request from the current location. To specify, our path always starts from 
+	the depot and goes to the closest request. From the location of that request, we will
+	then navigate to the closest coordinate from that request point and
+	so on until there are no more request. Everytime we find the next closest request, we will 
+	remove it from our delivery request vector and add it to another vector used to track the 
+	new crow order. This whole process will have a time complexity of O(R^2).
+
+ 
+

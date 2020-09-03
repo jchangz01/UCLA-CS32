@@ -1,0 +1,20 @@
+﻿  Actor.cpp
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\Actor.cpp(415,31): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\Actor.cpp(492,31): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  GameController.cpp
+  GameWorld.cpp
+  main.cpp
+  StudentWorld.cpp
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(66,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(117,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(133,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(148,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(171,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(186,37): warning C4244: '=': conversion from 'double' to 'Direction', possible loss of data
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(199,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(218,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(249,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(264,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\justi\Desktop\CS32\Project3\Kontagion\StudentWorld.cpp(298,23): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Kontagion.vcxproj -> C:\Users\justi\Desktop\CS32\Project3\Debug\Kontagion.exe
