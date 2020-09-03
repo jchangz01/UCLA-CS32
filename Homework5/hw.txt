@@ -1,0 +1,68 @@
+1. a)        50
+
+         20       60
+
+     10    40        70
+	
+      15  30       65   80
+        
+         25 34         76
+
+   b) In-Order: 10, 15, 20, 25, 30, 34, 40, 50, 60, 65, 70, 76, 80
+      Pre-Order: 50, 20, 10, 15, 40, 30, 25, 34, 60, 70, 65, 80, 76
+      Post-Order: 15, 10, 25, 34, 30, 40, 20, 65, 76, 80, 70, 60, 50
+   c)        50
+
+         15       60
+
+     10     40        70
+	
+           34      65    80
+	  
+	  25		 76 
+
+2.  a)  struct BTNODE {
+		int value;
+		BTNODE* parent, leftChild, rightChild;
+	};
+    b)  If tree empty
+		Allocate new node and set value to V 
+		Point root pointer to new node
+		Point parent, leftChild, and rightChild pointer to nullptr 
+	Start at root of the tree
+	While not done
+		If V is equal to current node’s value, done
+		If V is less than current node’s val
+			If there is left child, go left
+			else allocate a new node, set value to v, set current node’s left pointer to new node, set new node's 
+				parent pointer to current node, and set new node's child pointers to nullptr
+			Done
+		If V is greater than current node’s val
+			If there is right child, go right
+			else allocate a new node
+			set value to v set current node’s right pointer to new node, set new node's
+				parent pointer to current node, and set new node's child pointers to nullptr
+			Done
+
+3.  a)          7
+
+           3          5
+
+         0   2       4
+     b) { 7, 3, 5, 0, 2, 4 }
+     c) { 5, 3, 4, 0, 2 }
+
+4.  a) O(C + S)
+    b) O(log C + S)
+    c) O(log C + log S)
+    d) O(log S)
+    e) O(1)
+    f) O(log C + S)
+    g) O(Slog S)
+    h) O(ClogS) 
+
+5   b) We wouldn't be able to solve this with the one parameter listAll because
+       it does not store information of the inheritance path. Without the string argument, 
+       path, we would have to print information throughout the whole recursion
+       rather than being able to store all data into the path string and passing it through 
+       each recursion call.

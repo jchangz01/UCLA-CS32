@@ -1,0 +1,29 @@
+2. When inserting a new item into our map, we check if that item is a 
+duplicate in the map by calling the member function, "find(...)". Inside "find(...)",
+we use the comparison operator "!=" on our templated variable, key. Since
+our templated variable is in this case a type Coord, we have to define the != operator 
+for that class. In not doing so, we are presented with an overloading error.
+
+3. a) O(n^3)
+	Because this algorithm is a chain of 3 nested loops each running at a maximum 
+	of n times, n * n * n yields us the time complexity of n^3.
+   b) O(n^3)
+	Similar to part a, the Big-O of this function is n^3 because we have 3 nested loops 
+	iterating at most, N times. Unlike before, the second loop has a new limit i.
+	We may assume that this changes the speed of the algorithm; however, 
+	if we take a closer look, the maximum value i can attain is N which 
+	would bring us back to the original time complexity of O(n^3).
+
+4. a) O(n^2)
+	The reassign function begins by calling get() which can run a maximum 
+	of N times. It then goes through a for loop containing functions get() and
+	insert() thus making the time complexity 2N^2 + N. Finally, it calls insert() 
+	again along with swap() finalizing our big O equation as 2N^2 + 2N + 1. 
+	Since we only care about the most significant terms without their constant multipliers,
+	this leaves us with O(n^2).
+   b) O(n)
+	The reassign member function loops through the whole linked list N times reassigning 
+	each key a different value. Unlike the non-member version, void Map::reassign()
+	alters the current map used to called the function rather than copying the keys and new
+	values to the &result map. In doing so, the algorithm avoids calling insert() thus reducing
+	its time complexity from O(n^2) to just O(n). 
